@@ -13,7 +13,7 @@ jobs:
   # Test the image builds and works correctly.
   test:
     name: Test
-    runs-on: debian-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
@@ -30,7 +30,7 @@ jobs:
   # If on master branch, build and release image.
   release:
     name: Release
-    runs-on: debian-latest
+    runs-on: ubuntu-latest
     needs: test
     if: github.ref == 'refs/heads/master'
 
