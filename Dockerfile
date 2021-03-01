@@ -3,14 +3,15 @@ LABEL maintainer="Juergen Waibel <j.waibel@juergen-waibel.de>"
 
 ENV DEBIAN_FRONTEND noninteractive
 
-ENV pip_packages "ansible cryptography"
+ENV pip_packages "ansible cryptography debops"
 
 # Install dependencies.
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
        sudo systemd systemd-sysv \
-       build-essential wget libffi-dev libssl-dev \
+       build-essential wget libffi-dev libssl-dev libsasl2-dev libldap2-dev \
        python3-pip python3-dev python3-setuptools python3-wheel \
+       python3-future python3-ldap python3-netaddr python3-dnspython python3-passlib \
     && rm -rf /var/lib/apt/lists/* \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
     && apt-get clean

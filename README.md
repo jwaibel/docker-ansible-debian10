@@ -6,9 +6,19 @@ Debian 10 (Buster) Docker container for Ansible/DebOps playbook and role testing
 
 >**Important Note**: I use this image for testing in an isolated environment—not for production—and the settings and configuration used may not be suitable for a secure and performant production environment. Use on production servers at your own risk!
 
+>**Debops**: See https://debops.org/ for project details. DebOps - Your Debian-based data centern in a box.
 
 ## Tags
   - `latest`: Latest stable version of Ansible, with Python 3.x.
+  - `testing`: Same as `latest`, but with additional testing dependencies, including:
+    - `yamllint`
+    - `ansible-lint`
+    - `flake8`
+    - `testinfra`
+    - `molecule`
+  - `debops`: Same as `latest`, but with additional debops projekt dependencies.
+    - `debops`
+
 
 ## How to Build
 
