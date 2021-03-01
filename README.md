@@ -1,5 +1,7 @@
 # Debian 10 (Buster) Ansible Test Image
 
+[![CI](https://github.com/jwaibel/docker-ansible-debian10/workflows/Build/badge.svg?branch=master&event=push)](https://github.com/jwaibel/docker-ansible-debian10/actions?query=workflow%3ABuild) [![Docker pulls](https://img.shields.io/docker/pulls/jwaibel/docker-ansible-debian10)](https://hub.docker.com/r/jwaibel/docker-ansible-debian10/)
+
 Debian 10 (Buster) Docker container for Ansible/DebOps playbook and role testing.
 
 >**Important Note**: I use this image for testing in an isolated environment—not for production—and the settings and configuration used may not be suitable for a secure and performant production environment. Use on production servers at your own risk!
